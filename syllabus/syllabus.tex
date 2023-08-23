@@ -1,0 +1,274 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[inner=1in,outer=1in,top=1in,bottom=1in]{geometry}
+\pagestyle{empty}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\CourseTitle} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\CourseSemester \CourseYear} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xspace}
+\newcommand{\CourseNumber}{NPRE555}
+\newcommand{\CourseTitle}{Reactor Theory I\xspace}%
+\newcommand{\CourseSemester}{Fall\xspace}%
+\newcommand{\CourseYear}{2023\xspace}%
+\newcommand{\CourseDays}{MW\xspace}%
+\newcommand{\CourseStart}{1:00pm\xspace}%
+\newcommand{\CourseEnd}{2:50pm\xspace}%
+\newcommand{\CourseInstructor}{Dr. Madicken Munk}
+\newcommand{\CourseInstructorEmail}{mmunk2@illinois.edu}
+\newcommand{\CourseRoom}{1047\xspace}%
+\newcommand{\CourseBuilding}{Sidney Lu Mechanical Engineering Bldg\xspace}%
+\newcommand{\CourseZoom}{https://illinois.zoom.us/j/83926143033?pwd=enBVRTVxdUtva3o0SVRpbFg0eWordz09}%
+\newcommand{\CourseUniversity}{University of Illinois, Urbana-Champaign\xspace}%
+\newcommand{\MunkOfficeHourDays}{Wednesdays\xspace}%
+\newcommand{\MunkOfficeHourStart}{3:00 p.m.\xspace}%
+\newcommand{\MunkOfficeHourEnd}{4:00 p.m.\xspace}%
+\newcommand{\MunkOfficeHourPlace}{118 Talbot Laboratory, 104 S. Wright St.\xspace}
+\newcommand{\TeachingAssistant}{Sun Myung Park\xspace}%
+\newcommand{\TAOfficeHourDays}{Wednesdays\xspace}%
+\newcommand{\TAOfficeHourStart}{1:00pm\xspace}%
+\newcommand{\TAOfficeHourEnd}{3:00pm\xspace}%
+\newcommand{\TAOfficeHourPlace}{123 Talbot Laboratory\xspace}
+%\newcommand{\Course<++>}{<++>}
+%\newcommand{\Course<++>}{<++>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\CourseNumber: \CourseTitle\\}
+\author{\CourseUniversity}
+\date{\CourseSemester \CourseYear}
+\begin{document}
+\maketitle
+%\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\begin{center}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{rXrX}
+\hline
+\textbf{Instructor:} & \CourseInstructor & \textbf{Time:} & \CourseDays \CourseStart -- \CourseEnd \\
+\textbf{Email:} &  \href{mailto:\CourseInstructorEmail}{\CourseInstructorEmail} & \textbf{Place:} & \CourseRoom \CourseBuilding\\
+\textbf{Course Zoom:} & \url{\CourseZoom} & & \\
+\hline
+\end{tabularx}
+
+\end{table}
+\end{center}
+
+\paragraph{Course Pages:}
+\begin{enumerate}
+        \item \url{https://canvas.illinois.edu/courses/40761}
+        \item \url{https://www.gradescope.com/courses/584810}
+        \item \url{https://github.com/munkm/npre555}
+\end{enumerate}
+
+%\paragraph{TA Office Hours:} The teaching assistant for the course,
+%\TeachingAssistant, will hold office hours \TAOfficeHourDays from
+%\TAOfficeHourStart to \TAOfficeHourEnd in \TAOfficeHourPlace.
+
+\paragraph{Course Zoom:} A persistent zoom link (\url{\CourseZoom})
+for our course is included in
+the syllabus and on the course Canvas page.
+This zoom will only be active when campus
+requires that we have remote instruction or if Dr. Munk cannot instruct in
+person. Dr. Munk will announce when class is held via zoom on a canvas
+announcement.
+
+\paragraph{Office Hours:} Dr. Munk  will hold office hours on
+\MunkOfficeHourDays from \MunkOfficeHourStart to \MunkOfficeHourEnd in
+\MunkOfficeHourPlace Supplemental office hours are by appointment only
+and will never be available with less than 24 hours notice.
+Before making an appointment, please try the following options:
+\begin{itemize}
+\item If your colleagues might be helpful, please post your questions in the
+        canvas discussion forum provided for this purpose.
+\item If the TA might be helpful, please attend their office hours.
+\item Email Dr. Munk. If possible, please phrase your question such that it
+        can be answered `Yes' or `No'.
+\end{itemize}
+
+If none of the above are successful or appropriate, you may email me with a
+selection of times of your availability and we can find a time that is mutually
+agreeable.
+
+\paragraph{Main References:}
+A few essential references for this course will be assigned as readings and
+will be the source of homework problems. The required texts for this course are
+\cite{stacey} and \cite{bell_glasstone}. Both texts are available
+through the UIUC library or free through OSTI.gov. I also recommend
+\cite{duderstadt_hamilton} for conceptual review,
+\cite{lewis_miller} for computational methods details, and \cite{scopatz_huff}
+for best practices in your scientific coding development.
+
+\bibliographystyle{unsrt}
+\renewcommand{\refname}{\normalfont\selectfont\normalsize}\vspace{-1cm}
+\bibliography{bibliography}
+
+\paragraph{Objectives:}
+\begin{itemize}
+\item Advanced development of neutron transport theory
+\item  neutron slowing-down,
+\item resonance absorption,
+\item  approximations to the transport equation,
+\item  direct numerical methods and other techniques of approximation theory
+        applied to the neutron transport equation,
+\item  and advanced topics.
+\end{itemize}
+
+\paragraph{Prerequisites:}
+\begin{itemize}
+\item NPRE455 (waived for Physics Majors)
+\end{itemize}
+
+\paragraph{Grading Policy:} Grades will be assigned as a weighted sum of the
+following work.
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{Xr}
+        \textbf{Work} & \textbf{Weight} \\
+\hline
+\textbf{Homework}    & (40\%)  \\
+\textbf{Project 1}    & (20\%)  \\
+\textbf{Project 2}    & (20\%)  \\
+\textbf{Final Project}  & (20\%)  \\
+\hline
+\textbf{Total}       & (100\%)\\
+\end{tabularx}
+\end{table}
+
+\paragraph{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+\begin{flushleft}
+%Project Deadline \dotfill ~Month Day \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\paragraph{Class Policies:}
+
+\begin{itemize}
+\item[] \textbf{Integrity:} This is an institution of higher
+learning. You will be swiftly ejected from the course if you are caught
+undermining its integrity. Note the
+\href{http://www.provost.illinois.edu/academicintegrity/students.html}{Student's
+Quick Reference Guide to Academic Integrity} and the
+\href{http://studentcode.illinois.edu/article1_part4_1-401.html}{Academic
+Integrity Policy and Procedure}.
+\item[] \textbf{Attendance:} Attendence is strongly encouraged. While it is
+        typically mandatory, the COVID-19 pandemic requires flexibility.
+                Students unable to attend synchronous class sessions must
+                request recordings of those sessions from Prof. Huff and are
+                expected to watch them. If you are or become ill, please
+                communicate with me and the Dean of Students regarding your
+                expected need for accommodation in this class. I am willing,
+                able, and ready to make neccessary accommodations.
+\item[] \textbf{Electronics:} Active participation is essential and expected.
+\item[] \textbf{Collaboration:} Collaboratively reviewing course materials and studying for exams with fellow students can be enriching.  This is recommended.  However, unless otherwise instructed, homework assignments are to be completed independently and materials submitted as homework should be the result of one's own independent work.
+\item[] \textbf{Late Work:} There will be no negotiation about late work
+        except in the case of absence documented by an absence letter from the
+                Dean of Students.  The university policy for requesting such a
+                letter is in
+                \href{http://studentcode.illinois.edu/article1_part5_1-501.html}{the
+                Student Code}. Please note that such a letter is appropriate
+                for many types of conflicts, but that religious conflicts
+                require special early handling. In accordance with university
+                policy, students seeking an excused absence for religious
+                reasons should complete the Request for Accommodation for
+                Religious Observances Form, which can be found on the Office of
+                the Dean of Students website. The student should submit this
+                form to the instructor and the Office of the Dean of Students
+                by the end of the second week of the course to which it
+                applies.
+
+\end{itemize}
+
+\paragraph{Accessibility:} I hope that this course will be inclusive and
+accommodating for all learners. As such, I am committed upholding the vision
+and values of \href{http://www.inclusiveillinois.illinois.edu/index.html}{Inclusive Illinois}
+in my
+classroom.  With regard to accommodating all learners, please note that many
+resources are provided through
+\href{http://disability.illinois.edu/academic-support/accommodations}{the
+Division of Disability Resources and Educational Services}.  To request
+particular accommodations, please contact me as soon as possible so that we can
+work out any necessary arrangements.
+
+\paragraph{Other Resources:}
+University students typically experience a wide range of stressors during their
+time on campus. Accordingly, campus resources exist to help students manage
+stress levels, mental health, physical health, and emergencies while navigating
+this environment. I hope you will take advantage of these campus resources as
+soon as they can be of help.
+
+\begin{itemize}
+\item \href{https://campusrec.illinois.edu/}{The Campus Recreational Centers}
+\item \href{http://counselingcenter.illinois.edu/}{The Counselling Center}
+\item \href{http://www.mckinley.illinois.edu/clinics/mental\_health.htm}{The McKinley Mental Health Clinic}
+\item \href{http://odos.illinois.edu/emergency/}{The Emergency Dean}
+\end{itemize}
+
+\pagebreak
+\FloatBarrier
+\renewcommand{\arraystretch}{1}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{lllcllll}
+\multicolumn{8}{c}{\textbf{Course Schedule:}\textit{ Note that this schedule is subject to change}}\\
+&&&&&&&\\
+\textbf{Date} & \textbf{Week} & \textbf{Day} & \textbf{Unit} & \textbf{Chap.} & \textbf{Chap.} & \textbf{HW} & \textbf{HW}\\
+              &  &  & & \textbf{Stacey}& \textbf{B\&G} & \textbf{Given} & \textbf{Due}\\
+\hline
+\hline
+08-21 & 1 & M & No Class        &  &  &  & \\
+08-23 & 1 & W & Phase Variables & 9 & 1 & HW1 & \\
+08-28 & 2 & M & Transport Eqn.  & 9 & 1 & HW2 & HW1\\
+08-30 & 2 & W & Transport Eqn.  & 9 & 1 &  & \\
+09-04 & 3 & M & Labor Day (No Class) &  &  &  & \\
+09-06 & 3 & W & Boundary Conds. & 9 & 1 &  & \\
+09-11 & 4 & M & Boundary Conds. & 9 & 1 &  & \\
+09-13 & 4 & W & Angle \& Energy & 9 & 1 &  & \\
+09-18 & 5 & M & Angle \& Energy & 9 & 1 & CP1 & \\
+09-20 & 5 & W & MC              & 9.12 & 1\&2 &  HW3 & HW2\\
+09-25 & 6 & M & MC              & 9.12 & 1\&2 &  & \\
+09-27 & 6 & W & $P_N$           & 9 & 3 & HW4 & HW3\\
+10-02 & 7 & M & $P_N$           & 9 & 3 &  & \\
+10-04 & 7 & W & $P_N$           & 9 & 4 & HW5  & HW4\\
+10-09 & 8 & M & Multi-group $P_N$ & 9 & 4 &  & \\
+10-11 & 8 & W & Multi-group $P_N$ & 9 & 4 & CP2 & CP1\\
+10-16 & 9 & M & $P_N$ Eigenvalue Calcs.& 9 & 4 &  &   \\
+10-18 & 9 & W & $P_N$ Eigenvalue Calcs. & 9 & 4 & HW6 & HW5\\
+10-23 & 10 & M & $S_N$          & 9 & 5 &  & \\
+10-25 & 10 & W & $S_N$          & 9 & 5 &  & \\
+10-30 & 11 & M & $S_N$          & 9 & 5 &     &    \\
+11-01 & 11 & W & $S_N$          & 9 & 5 & HW7 & HW6 \\
+11-06 & 12 & M & Adjoint Eqn.   & 13 & 6 &  & \\
+11-08 & 12 & W & Adjoint Eqn.   & 13 & 6 & HW8 & HW7\\
+11-13 & 13 & M & Perturbation Theory & 13 & 6 & & \\
+11-15 & 13 & W & Variational Methods &  &  & CP3 & CP2\\
+11-20 & 14 & M & \textbf{Fall Break} & & &  & \\
+11-22 & 14 & W & \textbf{Fall Break} &  &  &  & \\
+11-27 & 15 & M & Neutron Slowing Down & 10 & 7 &  & \\
+11-29 & 15 & W & Neutron Slowing Down & 10 & 7 & HW9 & HW8 \\
+12-04 & 16 & M & Neutron Thermalization &  11 & 7 &  & \\
+12-06 & 16 & W & Resonance Absorption & 12 & 11 &  & HW9\\
+12-xx & 17 & M & \textbf{Final Exam} &  &  & CP3 & \\
+\end{tabular}
+\end{center}
+\end{table}
+%%%%%% THE END
+\end{document}
